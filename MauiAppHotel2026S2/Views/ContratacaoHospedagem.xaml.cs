@@ -54,7 +54,7 @@ public partial class ContratacaoHospedagem : ContentPage
         dtpck_checkout.Date = DateTime.Today.AddDays(1);
     }
 
-    // CONTADOR DE ADULTOS
+    // ADULTOS
 
     private void AumentarAdultos_Clicked(object sender, EventArgs e)
     {
@@ -74,7 +74,7 @@ public partial class ContratacaoHospedagem : ContentPage
         }
     }
 
-    // CONTADOR DE CRIANCAS
+    // CRIANCAS
 
     private void AumentarCriancas_Clicked(object sender, EventArgs e)
     {
