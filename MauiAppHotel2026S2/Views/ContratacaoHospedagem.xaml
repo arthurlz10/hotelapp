@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel2026S2.Views.ContratacaoHospedagem"
+             Title="Reservar"
+             BackgroundColor="#F2F5F9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="18">
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="HOTEL HORIZONTE"
+                       FontSize="13"
+                       FontAttributes="Bold"
+                       TextColor="#234A72"/>
+
+                <Label Text="Reserva de hospedagem"
+                       FontSize="25"
+                       FontAttributes="Bold"
+                       TextColor="#18324D"/>
+
+                <Label Text="Preencha as informações para calcular sua estadia."
+                       FontSize="13"
+                       TextColor="#666666"/>
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="2"
+                     Color="#234A72"/>
+
+            <VerticalStackLayout Spacing="12">
+                <Label Text="Quantidade de hóspedes"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="#18324D"/>
+
+                <Grid ColumnDefinitions="*,Auto,*"
+                      RowDefinitions="Auto,Auto"
+                      ColumnSpacing="10"
+                      RowSpacing="12">
+
+                    <Label Text="Adultos"
+                           TextColor="#333333"
+                           VerticalTextAlignment="Center"/>
+
+                    <Label Grid.Column="1"
+                           Text="{Binding Value, Source={x:Reference stp_adultos}}"
+                           TextColor="#18324D"
+                           FontAttributes="Bold"
+                           VerticalTextAlignment="Center"/>
+
+                    <Stepper x:Name="stp_adultos"
+                             Grid.Column="2"
+                             Minimum="1"
+                             Maximum="5"
+                             Value="1"/>
+
+                    <Label Grid.Row="1"
+                           Text="Crianças"
+                           TextColor="#333333"
+                           VerticalTextAlignment="Center"/>
+
+                    <Label Grid.Row="1"
+                           Grid.Column="1"
+                           Text="{Binding Value, Source={x:Reference stp_criancas}}"
+                           TextColor="#18324D"
+                           FontAttributes="Bold"
+                           VerticalTextAlignment="Center"/>
+
+                    <Stepper x:Name="stp_criancas"
+                             Grid.Row="1"
+                             Grid.Column="2"
+                             Minimum="0"
+                             Maximum="5"
+                             Value="0"/>
+                </Grid>
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="1"
+                     Color="#D5DDE5"/>
+
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Escolha sua acomodação"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="#18324D"/>
+
+                <Label Text="Selecione uma das opções disponíveis:"
+                       FontSize="13"
+                       TextColor="#666666"/>
+
+                <Picker x:Name="pck_quarto"
+                        ItemDisplayBinding="{Binding Nome}"
+                        Title="Selecione uma suíte"
+                        TextColor="#18324D"/>
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="1"
+                     Color="#D5DDE5"/>
+
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Período da hospedagem"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="#18324D"/>
+
+                <Label Text="Data de check-in"
+                       FontSize="13"
+                       TextColor="#333333"/>
+
+                <DatePicker x:Name="dtpck_checkin"
+                            DateSelected="dtpck_checkin_DateSelected"
+                            TextColor="#18324D"/>
+
+                <Label Text="Data de check-out"
+                       FontSize="13"
+                       TextColor="#333333"/>
+
+                <DatePicker x:Name="dtpck_checkout"
+                            TextColor="#18324D"/>
+            </VerticalStackLayout>
+
+            <Button Text="Calcular hospedagem"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="#234A72"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="8"
+                    HeightRequest="48"/>
+
+            <Label Text="Hotel Horizonte - 2026"
+                   FontSize="11"
+                   TextColor="#777777"
+                   HorizontalTextAlignment="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

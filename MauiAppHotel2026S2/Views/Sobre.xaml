@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel2026S2.Views.Sobre"
+             Title="Sobre"
+             BackgroundColor="#F2F5F9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+                             Spacing="18"
+                             VerticalOptions="Center">
+
+            <Label Text="HOTEL HORIZONTE"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   TextColor="#234A72"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Sobre o aplicativo"
+                   FontSize="25"
+                   FontAttributes="Bold"
+                   TextColor="#18324D"
+                   HorizontalTextAlignment="Center"/>
+
+            <BoxView HeightRequest="2"
+                     Color="#234A72"/>
+
+            <Label Text="Bem-vindo ao Hotel Horizonte!"
+                   FontSize="19"
+                   FontAttributes="Bold"
+                   TextColor="#18324D"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Este aplicativo foi desenvolvido para simular o processo de reserva de hospedagens, permitindo selecionar acomodações, informar a quantidade de hóspedes e consultar o valor da estadia."
+                   FontSize="14"
+                   TextColor="#555555"
+                   HorizontalTextAlignment="Center"
+                   LineHeight="1.4"/>
+
+            <BoxView HeightRequest="1"
+                     Color="#D5DDE5"/>
+
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Informações do projeto"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="#18324D"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Desenvolvedor: Arthur Lanzoni"
+                       FontSize="14"
+                       TextColor="#333333"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Ano: 2026"
+                       FontSize="14"
+                       TextColor="#333333"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Tecnologia: .NET MAUI e C#"
+                       FontSize="14"
+                       TextColor="#333333"
+                       HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="1"
+                     Color="#D5DDE5"/>
+
+            <Label Text="Projeto desenvolvido para fins educacionais."
+                   FontSize="12"
+                   TextColor="#777777"
+                   HorizontalTextAlignment="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

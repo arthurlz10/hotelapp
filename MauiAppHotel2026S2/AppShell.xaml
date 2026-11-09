@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiAppHotel2026S2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Views="clr-namespace:MauiAppHotel2026S2.Views"
+    Shell.NavBarIsVisible="False"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Hotel Horizonte">
+
+    <TabBar>
+        <ShellContent
+            Title="Reservar"
+            Icon="dotnet_bot.png"
+            ContentTemplate="{DataTemplate Views:ContratacaoHospedagem}"
+            Route="reserva" />
+        <ShellContent
+            Title="Sobre"
+            ContentTemplate="{DataTemplate Views:Sobre}"
+            Route="sobre" />
+    </TabBar>
+</Shell>
